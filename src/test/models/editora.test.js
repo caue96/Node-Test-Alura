@@ -1,16 +1,16 @@
 import {
   describe, expect, it, jest,
 } from '@jest/globals';
-import Editora from '../../models/editora';
+import Editora from '../../models/editora.js';
 
-describe('Testando o modelo editora', () => {
+describe('Testando o modelo Editora', () => {
   const objetoEditora = {
     nome: 'CDC',
-    cidade: 'Brasilia',
+    cidade: 'Sao Paulo',
     email: 'c@c.com',
   };
 
-  it('deve instancir uma nova editora', () => {
+  it('Deve instanciar uma nova editora', () => {
     const editora = new Editora(objetoEditora);
 
     expect(editora).toEqual(
@@ -49,9 +49,9 @@ describe('Testando o modelo editora', () => {
     editora.salvar = jest.fn().mockReturnValue({
       id: 10,
       nome: 'CDC',
-      cidade: 'Brasilia',
+      cidade: 'Sao Paulo',
       email: 'c@c.com',
-      crated_at: '2022-10-01',
+      created_at: '2022-10-01',
       updated_at: '2022-10-01',
     });
 
